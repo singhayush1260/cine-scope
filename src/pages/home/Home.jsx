@@ -10,7 +10,6 @@ const Home=()=>{
         <Trending/>
         <Popular/>
         <TopRated/>
-        <div style={{height:'100vh'}}>.</div>
         </div>
     )
 }
