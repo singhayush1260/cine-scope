@@ -10,7 +10,7 @@ import PosterFallback from "../../assets/images/no-poster.png";
 import CircleRating from "../circle-rating/CircleRating";
 import Genres from "../genres/Genres";
 
-const Carousel = ({ data, loading, endpoint }) => {
+const Carousel = ({ data, loading, endpoint, title }) => {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -39,6 +39,7 @@ const Carousel = ({ data, loading, endpoint }) => {
   return (
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carouselTitle">{title}</div> }
         <BsFillArrowLeftCircleFill className="carouselLeftNav arrow" onClick={() => showPrev()}/>
         <BsFillArrowRightCircleFill className="carouselRighttNav arrow" onClick={() => showNext()} />
         {!loading ? (
